@@ -1,7 +1,10 @@
 # tempest-raylib
 Recreation of ATARI Tempest using [Raylib](https://www.raylib.com/) [Python3 bindings](https://electronstudio.github.io/raylib-python-cffi/).
 
-test
+The game is incomplete and has some bugs. Its purpose was both educational and recreational. All PRs are very welcome!.
+
+[web version](https://emtyloc.github.io/tempest-raylib/)
+
 # Useful links
 
 - https://github.com/historicalsource/tempest/tree/main Tempest original source code.
