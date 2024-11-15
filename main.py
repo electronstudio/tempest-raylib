@@ -24,6 +24,8 @@ def init_gloom_shader() -> Shader:
 icon = load_image(os.path.join(os.path.dirname(__file__), "icon.png"))
 def setup_window():
     init_window(SCREEN_WIDTH, SCREEN_HEIGHT, "Tempest Raylib")
+    if platform.system() == "Emscripten":
+        platform.window.window_resize()
     set_window_icon(icon)
     set_target_fps(TARGET_FPS)
 
