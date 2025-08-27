@@ -34,13 +34,13 @@ jobs:
 
       - name: Build the site
         run: |
-          wget https://github.com/electronstudio/pygbag-raylib/releases/download/v5.5.0.1/raylib-5.5.0.1-cp310-abi3-wasm32_bi_emscripten.whl
-          unzip raylib-5.5.0.1-cp310-abi3-wasm32_bi_emscripten.whl
-          rm raylib-5.5.0.1-cp310-abi3-wasm32_bi_emscripten.whl
-          python3 -m pygbag --build --PYBUILD 3.12 --ume_block 0 --template noctx.tmpl --git main.py 
+          wget https://github.com/electronstudio/pygbag-raylib/releases/download/v5.5.0.3rc1/raylib-5.5.0.3rc1-cp310-abi3-wasm32_bi_emscripten.whl
+          unzip raylib-5.5.0.3rc1-cp310-abi3-wasm32_bi_emscripten.whl
+          rm raylib-5.5.0.3rc1-cp310-abi3-wasm32_bi_emscripten.whl
+          python3 -m pygbag --build --PYBUILD 3.12 --ume_block 0 --template noctx.tmpl main.py 
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./build/web
 
@@ -53,4 +53,4 @@ jobs:
 
     steps:
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
